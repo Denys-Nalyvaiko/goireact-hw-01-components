@@ -1,13 +1,14 @@
 import { TransactionItem } from 'components/TransactionItem/TransactionItem';
+import { TransactionTable, TableHead } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ transactions }) => {
   return (
-    <table className="transaction-history">
+    <TransactionTable>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TableHead>Type</TableHead>
+          <TableHead>Amount</TableHead>
+          <TableHead>Currency</TableHead>
         </tr>
       </thead>
 
@@ -21,6 +22,6 @@ export const TransactionHistory = ({ transactions }) => {
           />
         ))}
       </tbody>
-    </table>
+    </TransactionTable>
   );
 };

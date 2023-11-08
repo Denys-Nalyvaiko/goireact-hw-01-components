@@ -1,15 +1,22 @@
 import { StatisticsItem } from 'components/StatisticItem/StatisticItem';
+import { StatisticContainer, StatsList, Title } from './Statistics.styled';
+import { getRandomHexColor } from './randomHexColor';
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+    <StatisticContainer>
+      {title && <Title>{title}</Title>}
 
-      <ul className="stat-list">
+      <StatsList>
         {stats.map(({ id, label, percentage }) => (
-          <StatisticsItem key={id} label={label} percentage={percentage} />
+          <StatisticsItem
+            key={id}
+            label={label}
+            percentage={percentage}
+            hex={getRandomHexColor()}
+          />
         ))}
-      </ul>
-    </section>
+      </StatsList>
+    </StatisticContainer>
   );
 };

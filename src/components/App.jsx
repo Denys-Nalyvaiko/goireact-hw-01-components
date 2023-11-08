@@ -1,3 +1,4 @@
+import { Section } from './Section.styled';
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendList/FriendList';
@@ -6,7 +7,7 @@ import { user, data, friends, transactions } from 'data';
 
 export const App = () => {
   return (
-    <>
+    <Section>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -17,6 +18,6 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory transactions={transactions} />
-    </>
+    </Section>
   );
 };

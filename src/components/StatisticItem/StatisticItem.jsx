@@ -1,8 +1,10 @@
-export const StatisticsItem = ({ label, percentage }) => {
+import { StatItem } from './StatisticItem.styled';
+
+export const StatisticsItem = ({ label, percentage, hex }) => {
   return (
-    <li className="item">
+    <StatItem $hex={hex}>
       <span className="label">{label}</span>
       <span className="percentage">{percentage}%</span>
-    </li>
+    </StatItem>
   );
 };

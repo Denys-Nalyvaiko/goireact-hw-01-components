@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
+import { GlobalStyle, ModernNormalize } from 'css/GlobalStyles';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <ModernNormalize />
+    <GlobalStyle />
     <App />
   </React.StrictMode>
 );
