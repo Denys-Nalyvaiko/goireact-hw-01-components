@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getRandomHexColor } from './randomHexColor';
 
 export const StatItem = styled.li`
   display: flex;
@@ -6,6 +7,6 @@ export const StatItem = styled.li`
   justify-content: center;
   align-items: center;
   padding: 14px;
-  background-color: ${({ $hex }) => $hex};
+  background-color: ${getRandomHexColor};
   color: #fafafa;
 `;

@@ -1,5 +1,8 @@
-import { TransactionItem } from 'components/TransactionItem/TransactionItem';
-import { TransactionTable, TableHead } from './TransactionHistory.styled';
+import {
+  TransactionTable,
+  TableHead,
+  TableData,
+} from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ transactions }) => {
   return (
@@ -14,12 +17,11 @@ export const TransactionHistory = ({ transactions }) => {
 
       <tbody>
         {transactions.map(({ id, type, amount, currency }) => (
-          <TransactionItem
-            key={id}
-            type={type}
-            amount={amount}
-            currency={currency}
-          />
+          <tr>
+            <TableData>{type}</TableData>
+            <TableData>{amount}</TableData>
+            <TableData>{currency}</TableData>
+          </tr>
         ))}
       </tbody>
     </TransactionTable>
